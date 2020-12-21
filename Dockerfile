@@ -18,4 +18,4 @@ RUN CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -cs)" && \
     apt-get install -y google-cloud-sdk
 
 # japanese font
-RUN apk add font-ipa fontconfig && fc-cache -f
+RUN apt-get install -y fonts-ipafont fontconfig && fc-list && fc-cache -f
